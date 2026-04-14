@@ -1,19 +1,20 @@
+import { useState } from 'react'
 function App() {
-  const fruit=(name)=>{
-    alert(name)
+  const[data,setData]=useState("Hello World");
+
+  function fun(){
+    setData("Demo")
   }
 
   return (
     
     <>
-
+      <h1>Demo of state for variables</h1>
+      <h2>{data}</h2>
+      <button onClick={()=>fun()}>Click Me</button>
     
-     <h1>Html page</h1>
-      <button onClick={()=> fruit("Apple")}>Click Me</button>
-
     </>
   )
-   
 }
-
+   
 export default App
